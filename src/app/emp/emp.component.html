@@ -1,0 +1,25 @@
+
+
+<form id="imp" [formGroup]="formValue">
+    <input type="text"  name="name" formControlName="name">
+    <input type="text"  name="number" formControlName="number">
+    <button type="button" (click)="postemp()">add</button>
+    <td><button type="button" (click)="update()">update</button></td>
+</form>
+
+
+<table>
+    <thead>
+        <tr><th>no</th>
+        <th>name</th></tr>
+       
+    </thead>
+    <tbody>
+        <tr *ngFor="let emp of employeeData "><td>{{emp.id}}</td>
+            <td>{{emp.name}}</td>
+        <td><button type="button" (click)="OnEdit(emp)">edit</button></td>
+        
+        <td><button type="button" (click)="delete1(emp)">delete</button></td>
+    </tr>
+    </tbody>
+</table>
