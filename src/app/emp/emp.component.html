@@ -1,5 +1,10 @@
 
-
+<form id="imp1" [formGroup]="formValue">
+ <!-- <a href="about">About</a> -->
+ <li><a routerLink="about"><strong>Contact</strong></a></li>
+ <!-- <li><a [routerLink]="/about"><strong>Contact</strong></a></li> -->
+<!-- <li> <a  [routerLink]="/about"><strong>Contact</strong></a></li> -->
+</form>
 <form id="imp" [formGroup]="formValue">
     <input type="text"  name="name" formControlName="name">
     <input type="text"  name="number" formControlName="number">
@@ -15,11 +20,14 @@
        
     </thead>
     <tbody>
+        <td *ngFor="let emp1 of employeeData1 ">{{emp1.company}}</td>
         <tr *ngFor="let emp of employeeData "><td>{{emp.id}}</td>
-            <td>{{emp.name}}</td>
+            <td>{{emp.value}}</td>
+      
         <td><button type="button" (click)="OnEdit(emp)">edit</button></td>
         
         <td><button type="button" (click)="delete1(emp)">delete</button></td>
     </tr>
     </tbody>
 </table>
+<!-- <router-outlet></router-outlet> -->

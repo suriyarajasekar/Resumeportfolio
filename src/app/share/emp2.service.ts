@@ -33,6 +33,34 @@ export class Emp2Service {
       return res;
     }))
   }
+
+  getContact(){
+    return this.http.get<any>("http://localhost:3000/contact")
+    pipe(map((res: any) => {
+      return res;
+    }))
+  }
+  getContact1(){
+    return this.http.get<any>("http://localhost:3000/contact1")
+    pipe(map((res: any) => {
+      return res;
+    }))
+  }
+  getProjects(){
+    return this.http.get<any>("http://localhost:3000/projects")
+    pipe(map((res: any) => {
+      return res;
+    }))
+   // alert("hello..")
+  }
+
+  getEmployee1() {
+    return this.http.get<any>("http://localhost:3000/work")
+    pipe(map((res: any) => {
+      return res;
+    }))
+  }
+
 updateemployee(data:any,id:number)
 {
   return this.http.put<any>("http://localhost:3000/posts/"+id,data)

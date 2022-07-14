@@ -11,12 +11,14 @@ export class EmpComponent implements OnInit {
   formValue!: FormGroup;
   employeeobj:Employee=new Employee();
   employeeData!:any;
+  employeeData1!:any;
 
   constructor(private ser:Emp2Service,private formbuilder:FormBuilder) { }
 
   ngOnInit(): void {
     this.formValue=this.formbuilder.group({number:0,name:['']})
     this.getAllEmployee();
+    this.getAllEmployee1();
   }
 
   postemp()
@@ -61,6 +63,16 @@ export class EmpComponent implements OnInit {
         this.employeeData = res;
       })
       //console.log(this.employeeData)
+  }
+
+  //...............................................
+
+  getAllEmployee1() {
+    this.ser.getEmployee1()
+      .subscribe(res => {
+        this.employeeData1 = res;
+      })
+      console.log(this.employeeData1)
   }
 
   update()
