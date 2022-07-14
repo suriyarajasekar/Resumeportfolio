@@ -47,7 +47,7 @@ export class Emp2Service {
     }))
   }
   getProjects(){
-    return this.http.get<any>("http://localhost:3000/projects")
+    return this.http.get<any>("http://localhost:3000/project")
     pipe(map((res: any) => {
       return res;
     }))

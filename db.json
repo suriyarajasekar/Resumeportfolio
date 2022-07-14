@@ -13,12 +13,20 @@
   "work": [
     {
       "company": "Experienced developer with over4 years of experience in Wipro",
-      "position": "developer"
+      "position": "developer",
+      "title":"Dinybee- Developed in Angular",
+      "description":" Resolved Conflicts and got Responsive Website."
+      
+
+    },
+    {
+      "title":"FashionBeauty- Developed in Angular",
+      "description":" Resolved Conflicts and got Responsive Website."
     }
    
   
     ],
-    "projects": [
+    "project": [
       {
         "title":"Dinybee- Developed in Angular",
         "description":" Resolved Conflicts and got Responsive Website."
