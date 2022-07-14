@@ -33,6 +33,12 @@ export class Emp2Service {
       return res;
     }))
   }
+  getAchievement() {
+    return this.http.get<any>("http://localhost:3000/achievement")
+    pipe(map((res: any) => {
+      return res;
+    }))
+  }
 
   getContact(){
     return this.http.get<any>("http://localhost:3000/contact")

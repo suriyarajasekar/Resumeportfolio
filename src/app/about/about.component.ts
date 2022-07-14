@@ -18,6 +18,7 @@ export class AboutComponent implements OnInit {
   address:any;
   projects!:any;
   title!:any;
+  awards!:any;
   constructor(private ser:Emp2Service) { }
 
   ngOnInit(): void {
@@ -63,6 +64,13 @@ export class AboutComponent implements OnInit {
     this.ser.getEmployee()
       .subscribe(res => {
         this.employeeData = res;
+      })
+      //console.log(this.employeeData)
+  }
+  getAllachievement() {
+    this.ser.getAchievement()
+      .subscribe(res => {
+        this.awards = res;
       })
       //console.log(this.employeeData)
   }
