@@ -20,3 +20,19 @@ color: brown;}
 #main {margin-left: 120px}
 /* Remove margins from "page content" on small screens */
 @media only screen and (max-width: 600px) {#main {margin-left: 0}}
+
+
+.projects{
+    width: 20%;
+    position: static;
+    display: contents;
+
+}
+.container1{
+    width: 20%;
+    position: static;
+    display: contents;
+    background-color:white;
+
+}
+

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Emp2Service } from '../share/emp2.service';
-
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-about',
@@ -19,9 +19,11 @@ export class AboutComponent implements OnInit {
   projects!:any;
   title!:any;
   awards!:any;
-  constructor(private ser:Emp2Service) { }
+  constructor(private ser:Emp2Service,private activatedroute: ActivatedRoute,
+    private router: Router) { }
 
   ngOnInit(): void {
+    this.getAllachievement();
     this.getAllEmployee();
     this.getAllEmployee1();
     this. getcontact();
@@ -31,6 +33,13 @@ export class AboutComponent implements OnInit {
      console.log(this.name)
     this.position=this.employeeData1.value.position;
     console.log(this.projects.title)
+  }
+  navigationCall(value: any) {
+   // if(value == 'employees/create'){
+     // this.sideBarShow.rightSidenav= true;
+    // } else {
+     this.router.navigate([value])
+  // }
   }
   getcontact() {
     this.ser.getContact()
